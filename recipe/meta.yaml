@@ -1,5 +1,5 @@
 {% set name = "libspiro" %}
-{% set version = "20221101" %}
+{% set version = "20240902" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/fontforge/libspiro/releases/download/{{ version }}/libspiro-dist-{{ version }}.tar.gz
-  sha256: 5984fb5af3e4e1f927f3a74850b705a711fb86284802a5e6170b09786440e8be
+  sha256: c573228542b3bf78a51c5ce7b0a609e8a2763938a088376230c452c4f9714848
 
 build:
   number: 0
@@ -21,6 +21,7 @@ requirements:
     - automake
     - libtool
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
   run:
 
